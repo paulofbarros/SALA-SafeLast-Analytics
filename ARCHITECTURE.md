@@ -1,40 +1,40 @@
 # SALA • SafeLast Analytics - System Architecture
 
-Este documento descreve a infraestrutura técnica e o fluxo de dados do ecossistema SALA, projetado para mitigação de riscos biomecânicos e fadiga em operações de transporte profissional na Noruega.
+This document describes the technical infrastructure and data flow of the SALA ecosystem, designed for biomechanical risk mitigation and fatigue monitoring in professional transport operations in Norway.
 
-## 1. Stack Tecnológica (The Engine)
+## 1. Tech Stack (The Engine)
 
-O SALA foi desenhado para ser leve, escalável e de baixo custo operacional:
+SALA is designed to be lightweight, scalable, and cost-efficient:
 
-* **Backend:** Python (Google Cloud Functions / AWS Lambda) - Processamento "Serverless" do algoritmo de risco.
-* **Database:** Firebase Realtime Database - Para sincronização instantânea entre o camião e o portal da empresa.
-* **Frontend:** HTML5, CSS3, JavaScript (Vanilla) - Interfaces otimizadas para baixo consumo de dados.
-* **Integração de Dados:** API da MET Norway (Meteorologia) e Google Maps Platform (Telemetria).
+* **Backend:** Python (Google Cloud Functions / AWS Lambda) - Serverless processing of the risk algorithm.
+* **Database:** Firebase Realtime Database - For instant synchronization between the truck and the company portal.
+* **Frontend:** HTML5, CSS3, JavaScript (Vanilla) - Optimized interfaces for low data consumption.
+* **Data Integration:** MET Norway API (Weather) and Google Maps Platform (Telemetry).
 
-## 2. Fluxo do Algoritmo (Data Pipeline)
+## 2. Data Pipeline & Algorithm Flow
 
-O cálculo do **SALA Risk Index** segue este fluxo de 4 etapas:
+The **SALA Risk Index** calculation follows a 4-step process:
 
-1.  **Ingestão:** O sistema recebe dados de telemetria (Tempo de condução, Acelerómetro, Localização GPS).
-2.  **Enriquecimento:** O algoritmo cruza a localização com APIs meteorológicas para determinar o *Surface Friction Coefficient* (Sf) em tempo real (ex: Neve vs. Asfalto seco).
-3.  **Processamento:** O motor de cálculo em Python processa a fórmula biomecânica:
+1.  **Ingestion:** The system receives telemetry data (Driving time, G-force/Accelerometer, GPS Location).
+2.  **Enrichment:** The algorithm crosses the location with weather APIs to determine the *Surface Friction Coefficient* (Sf) in real-time (e.g., Snow vs. Dry asphalt).
+3.  **Processing:** The Python engine processes the biomechanical formula:
     `SALA_Risk = (Fatigue_Level * 1.5) + (Surface_Risk * 1.2) + (Biomechanic_Load)`
-4.  **Entrega:** O resultado é enviado via WebSockets para o Dashboard do motorista e o Portal da Empresa em < 200ms.
+4.  **Delivery:** The result is pushed via WebSockets to the Driver Dashboard and Company Portal in < 200ms.
 
-## 3. Estratégia de Implementação (PoC)
+## 3. Implementation Strategy (PoC)
 
-Para garantir a precisão e segurança, o algoritmo será testado em três fases:
+To ensure accuracy and safety, the algorithm will be tested in three stages:
 
-* **Fase A (Shadow Mode):** Testes em "back-testing" com dados históricos de frotas de Larvik para validar a taxa de acerto do algoritmo contra incidentes reais já ocorridos.
-* **Fase B (Controlled Pilot):** Implementação em 5 veículos operando na rota E18 (Corredor Sul), recolhendo dados reais sem intervenção direta.
-* **Fase C (Full Integration):** Lançamento do portal de BI para gestores de frota e integração com sistemas de RH para monitorização de HMS (Saúde, Meio Ambiente e Segurança).
+* **Phase A (Shadow Mode):** Back-testing with historical fleet data from Larvik to validate the algorithm's accuracy against real past incidents.
+* **Phase B (Controlled Pilot):** Deployment in 5 vehicles operating on the E18 corridor (Southern route), collecting real-time data for calibration.
+* **Phase C (Full Integration):** Launch of the BI portal for fleet managers and integration with HR systems for HMS (Health, Safety, and Environment) monitoring.
 
-## 4. Segurança e Compliance (GDPR)
+## 4. Security & Compliance (GDPR)
 
-* **Anonimização:** Os dados de risco são processados de forma a proteger a identidade do motorista, focando na segurança operacional.
-* **Criptografia:** Toda a comunicação entre o veículo e a nuvem utiliza protocolos TLS 1.3.
-* **Conformidade:** Alinhado com a **Arbeidsmiljøloven § 4-4** (Lei do Ambiente de Trabalho da Noruega).
+* **Anonymization:** Risk data is processed to protect the driver's identity, focusing on operational safety and biomechanical health.
+* **Encryption:** All communication between the vehicle and the cloud uses TLS 1.3 protocols.
+* **Compliance:** Fully aligned with the **Norwegian Working Environment Act (Arbeidsmiljøloven § 4-4)**.
 
 ---
-*Autor: Paulo Fernando de Barros*
-*Status: Architecture Design Phase*
+**Author:** Paulo Fernando de Barros  
+**Status:** Architecture Design Phase (Ready for PoC)
