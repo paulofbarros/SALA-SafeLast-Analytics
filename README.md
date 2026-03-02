@@ -1,28 +1,34 @@
-# SAFE-LOAD ANALYTICS (v1.0.0) 🛡️🚛
-**Data-Driven Ergonomic Risk Intelligence for the Norwegian Transport & Logistics Sector**
+# SALA • SAFE-LOAD ANALYTICS 🚛❄️
+**Algorithmic Risk Intelligence & Predictive Data Framework**
 
-## 👤 Author & Lead Analyst
-**Paulo Fernando De Barros** - *Strategic Data Intelligence Analyst* Specialist in Supply Chain Integrity & Public Policy Management.  
-[Official Portfolio: barros.no](https://barros.no)
+Official Domain: [www.safelast.no](http://www.safelast.no)  
+Author: **Paulo Fernando De Barros** Focus: *Occupational Health, Transport Regulation & Predictive Analytics (Norway)*
 
 ---
 
-## 🇳🇴 The Mission
-SAFE-LOAD ANALYTICS is a proprietary predictive algorithm designed to mitigate musculoskeletal injuries (Shoulder/Lumbar) for professional drivers in Norway. By integrating real-time environmental data and human fatigue factors, the system provides a "Safety Gate" for manual handling operations in extreme Nordic conditions.
+## 📋 Overview
+SALA (Safe-Load Analytics) is a proprietary predictive framework designed to quantify and mitigate ergonomic risks in the Norwegian transport sector. By integrating real-time environmental variables with human fatigue indicators, the system transforms occupational safety from reactive to **predictive intelligence**.
 
-## 🚀 Core Features (2026 Edition)
-- **Dynamic Surface Matrix:** Real-time calculation of rolling resistance for **Asphalt, Gravel (Grus), Mud (Lama), and Snow/Ice**.
-- **YSK Competence Integration:** Designed to align with **Statens vegvesen** (YSK) mandatory training standards for professional drivers.
-- **Thermal Adrenaline Correction:** Adjusts safety thresholds based on shift duration to prevent injuries masked by physical warmth.
-- **Multi-Party Reporting:** Automated compliance logs for Logistics Operators (e.g., PostNord/Bring), Carriers, and Regulatory Bodies (NAV/Arbeidstilsynet).
+The project aligns with **YSK (Statens vegvesen)** professional competence standards and aims to provide data-driven insights for **NAV** and transport unions to reduce long-term sickness claims.
 
-## 🛠️ Technical Framework
-The system operates on a **Risk-Adjusted Decision Tree**:
-1. **Input:** Cargo Weight (Barcode) + Surface Type + Incline % + Driver Pain Mapping.
-2. **Processing:** The SAFE-LOAD engine applies non-linear multipliers based on Norwegian terrain friction coefficients.
-3. **Decision:** Go / No-Go / Recommended Mitigation (e.g., Mandatory Electric Pallet Jack).
+## ⚙️ How it Works (The Algorithm)
+The system calculates the **Ergonomic Risk Index ($R_i$)** by cross-referencing surface friction factors with physical load and duty time.
 
-## 🔒 Intellectual Property & Compliance
-The mathematical weightings, friction coefficients, and predictive modeling within this repository are **Proprietary**. This documentation serves for regulatory evaluation by strategic partners, including **Dr. Natália Bellan (PhD)** and educational institutions like **Volmax**.
+### The Core Formula:
+$$R_i = (S_f \cdot L_w) + (F_i \cdot T_h)$$
 
-© 2026 Paulo Fernando De Barros. All rights reserved. Based in Larvik, Norway.
+- **$S_f$ (Surface Factor):** Dynamic coefficients for Snow (1.5), Slush (1.7), and Mud (1.8).
+- **$L_w$ (Load Weight):** Total tonnage being handled.
+- **$F_i$ (Fatigue Index):** Cumulative metabolic cost based on active duty.
+- **$T_h$ (Time/Hours):** Duration of continuous physical intervention.
+
+## 📊 Dashboard Visualization
+![SALA Dashboard](URL_DA_SUA_IMAGEM_AQUI)
+*The dashboard provides real-time strategic recommendations to drivers and ROI/Health analytics for fleet managers.*
+
+## 🇳🇴 Norwegian Regulatory Alignment
+- **Vigilance in Health:** Designed to meet Norwegian work environment regulations (Arbeidsmiljøloven).
+- **Predictive Intervention:** Focus on preventing Musculoskeletal Disorders (MSDs) in sub-arctic logistics.
+
+---
+© 2026 Paulo Fernando De Barros | Larvik, Norway
