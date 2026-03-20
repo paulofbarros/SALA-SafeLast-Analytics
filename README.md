@@ -1,11 +1,11 @@
 # SALA • SafeLast Analytics
-### *Predictive Biomechanical Risk Mitigation for the Norwegian Transport Sector*
+### *Predictive Biomechanical Risk Mitigation for the logistikk og transport Sector*
 
 [![Live Demo](https://img.shields.io/badge/Live-Website-blue?style=for-the-badge)](https://safelast.no)
 [![Architecture](https://img.shields.io/badge/Tech-Architecture-green?style=for-the-badge)](ARCHITECTURE.md)
 
 ## 🚛 The Vision
-SALA is a specialized Analytics solution designed to reduce workplace injuries and operational costs in the Norwegian transport industry. By crossing real-time telemetry with biomechanical load data and weather conditions, we provide actionable intelligence to protect the industry's most valuable asset: the driver.
+SALA is a specialized Analytics solution designed to reduce workplace injuries and operational costs in the logistikk og transport industry. By crossing real-time telemetry with biomechanical load data and weather conditions, we provide actionable intelligence to protect the industry's most valuable asset: the driver.
 
 ## ⚖️ Legal & Scientific Foundation
 Our algorithm is built on the requirements of the **Norwegian Working Environment Act (Arbeidsmiljøloven § 4-4)**, which mandates that work must be arranged to avoid unhealthy physical strain on employees.
