@@ -25,7 +25,7 @@ The **SALA Risk Index** calculation follows a 4-step process:
 
 To ensure accuracy and safety, the algorithm will be tested in three stages:
 
-* **Phase A (Shadow Mode):** Back-testing with historical fleet data from Larvik to validate the algorithm's accuracy against real past incidents.
+* **Phase A (Shadow Mode):** Back-testing with historical fleet data from ek: "Larvik" to validate the algorithm's accuracy against real past incidents.
 * **Phase B (Controlled Pilot):** Deployment in 5 vehicles operating on the E18 corridor (Southern route), collecting real-time data for calibration.
 * **Phase C (Full Integration):** Launch of the BI portal for fleet managers and integration with HR systems for HMS (Health, Safety, and Environment) monitoring.
 
